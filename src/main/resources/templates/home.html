@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style>
+    body {
+        background: #f4f8fb;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .main-container {
+        max-width: 420px;
+        margin: 80px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        padding: 40px 32px 32px 32px;
+        text-align: center;
+    }
+    h1 {
+        color: #1976d2;
+        margin-bottom: 24px;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    h3 {
+        color: #388e3c;
+        margin-bottom: 24px;
+    }
+    #insert, #fetch {
+        height: 44px;
+        width: 180px;
+        border-radius: 30px;
+        border: none;
+        font-size: 1.08rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 10px 0;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+        transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    }
+    #insert {
+        background-image: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+        color: #333;
+    }
+    #insert:hover {
+        background-image: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(198, 119, 0, 0.13);
+    }
+    #fetch {
+        background-image: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    }
+    #fetch:hover {
+        background-image: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(81, 90, 218, 0.13);
+    }
+    @media (max-width: 600px) {
+        .main-container {
+            padding: 18px 4px;
+            max-width: 98vw;
+        }
+        #insert, #fetch {
+            width: 98vw;
+            min-width: 160px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>CRUD Operation Using Spring Boot</h1>
+        <h3 th:if="${message}" th:text="${message}"></h3>
+        <a href="/insert"><button id="insert">Insert Record</button></a><br>
+        <a href="/fetch"><button id="fetch">Fetch Record</button></a>
+    </div>
+</body>
+</html>
