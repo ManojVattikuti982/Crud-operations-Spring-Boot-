@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Stopping spring application processer"
-                    sudo pkill -f target/boot_crud-0.0.1-SNAPSHOT.jar
+                    #sudo pkill -f target/boot_crud-0.0.1-SNAPSHOT.jar
                     # Start the Spring application
                     echo "Starting the Spring application..."
                     sudo java -jar target/boot_crud-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
